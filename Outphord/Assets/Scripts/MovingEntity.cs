@@ -14,13 +14,13 @@ public class MovingEntity : MonoBehaviour
     }
     protected void MoveTowards(Vector3 direction)
     {
-        towardsTarget = direction - transform.position;
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, movementSpeed * Time.deltaTime);
        
-        Quaternion towardsTargetRotation = Quaternion.LookRotation(towardsTarget, Vector3.up);
+        Quaternion towardsTargetRotation = Quaternion.LookRotation(direction, Vector3.up);
         transform.rotation = Quaternion.Lerp(transform.rotation, towardsTargetRotation, rotationSpeed * Time.deltaTime);
 
 
-        transform.position += towardsTarget.normalized * movementSpeed * Time.deltaTime;
+        
     }
     // Update is called once per frame
     void Update()

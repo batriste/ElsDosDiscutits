@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MovingEntity
 {
     Vector3 targetPosition;
-    Vector3 towardsTarget;
+    
 
     float wanderRadius = 5f;
     void Start()
@@ -24,9 +24,13 @@ public class Enemy : MovingEntity
 
             Debug.DrawLine(transform.position, targetPosition, Color.green);
     }
-        void RecalculateTargetPosition()
-        {
-            targetPosition = transform.position + Random.insideUnitSphere * wanderRadius;
-            targetPosition.y = 0;
-        }
+    void RecalculateTargetPosition()
+    {
+        targetPosition = transform.position + Random.insideUnitSphere * wanderRadius;
+        targetPosition.y = 1f;
     }
+    public void onDeadHandler()
+    {
+        Destroy(gameObject);
+    }
+}
