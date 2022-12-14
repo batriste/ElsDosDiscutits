@@ -7,11 +7,11 @@ public class Player : MovingEntity
     public GameObject bulletPrefab;
     public float shootCooldown = 0.25f;
     float lastShotTime = 0;
-    Gun gun;
+    //Gun gun;
     // Start is called before the first frame update
     void Start()
     {
-        gun = GetComponentInChildren<Gun>();
+        //gun = GetComponentInChildren<Gun>();
     }
 
     // Update is called once per frame
@@ -30,11 +30,11 @@ public class Player : MovingEntity
 
         if (desiredDirection != Vector3.zero)
             MoveTowards(desiredDirection.normalized);
-        if (Input.GetKey(KeyCode.Space))
+        /*if (Input.GetKey(KeyCode.Space))
         {
             if (gun != null)
             gun.Shoot();
-        }
+        }*/
     }
     void Shot()
     {
