@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -977,6 +977,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 10982e0a94e77aa4c98d6c107635b7d5, type: 3}
+--- !u!1 &743498504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: add022c4d87eb9a4e8689b050fe4a16a, type: 3}
+  m_PrefabInstance: {fileID: 237704845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &743498508
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743498504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 498638293490869027, guid: add022c4d87eb9a4e8689b050fe4a16a, type: 3}
 --- !u!1 &781645518 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e6d5451725bfea46b3f688fe8b10ea9, type: 3}
@@ -2298,11 +2317,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 94271671, guid: ed088da13e0c49443a14dee91c5aea28, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 94271674, guid: ed088da13e0c49443a14dee91c5aea28, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 94271674, guid: ed088da13e0c49443a14dee91c5aea28, type: 3}
       propertyPath: mainCamera
@@ -2360,6 +2379,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b8fff3f93e7f6cf4388f52381515bd7c, type: 2}
+    - target: {fileID: 5433899633898815008, guid: ed088da13e0c49443a14dee91c5aea28, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6d9ffd3997e286743a7be53cb0377fbf, type: 2}
     - target: {fileID: 8544495397013945396, guid: ed088da13e0c49443a14dee91c5aea28, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

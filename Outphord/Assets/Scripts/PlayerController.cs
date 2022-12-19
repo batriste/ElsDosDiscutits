@@ -28,9 +28,16 @@ public class PlayerController : MonoBehaviour
     private Vector3 hitNormal;
     public float slideVelocity;
     public float slopeForceDown;
-    // Start is called before the first frame update
-    void Start()
+    
+    //Animacions
+    private Animator anim;
+
+    public float x, y;
+     // Start is called before the first frame update
+        void Start()
     {
+
+        anim = GetComponent<Animator>();
         player = GetComponent<CharacterController>();
         
     }
@@ -71,6 +78,9 @@ public class PlayerController : MonoBehaviour
         camDirection();
         
         playerInput = new Vector3(horizontalMove, 0, verticalMove);
+        anim.SetFloat("X", playerInput.x);
+        anim.SetFloat("Y", playerInput.z);
+
         //Limitaria la velocidad
         playerInput = Vector3.ClampMagnitude(playerInput, 1);
         //Leer pdf 1.2
