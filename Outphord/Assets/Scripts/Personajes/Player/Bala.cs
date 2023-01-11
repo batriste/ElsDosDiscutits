@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bala : MonoBehaviour
 {
     private Rigidbody element;
-    public float Speed = 10;
+    public float Speed = 10f;
     public float flyTime = 3f;
     public float damage = 2f;
 

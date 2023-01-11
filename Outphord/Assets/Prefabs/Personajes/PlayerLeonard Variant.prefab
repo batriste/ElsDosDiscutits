@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dc4bc67bd0d56a946b25c4b85d4cc9a7, type: 3}
       propertyPath: m_Name
-      value: PlayerLeonard
+      value: PlayerLeonard Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -99,25 +99,3 @@ MonoBehaviour:
   towardsTarget: {x: 0, y: 0, z: 0}
   bulletPrefab: {fileID: 0}
   shootCooldown: 0.25
---- !u!114 &94271674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640131141336071904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 787fd1dbddb16e74bbadfb9ffaf4822f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalMove: 0
-  verticalMove: 0
-  player: {fileID: 0}
-  gravetat: 9.8
-  powerJump: 8
-  fallVelocity: 0
-  mainCamera: {fileID: 0}
-  PlayerSpeed: 10
-  slideVelocity: 0
-  slopeForceDown: 0
