@@ -9,12 +9,14 @@ public class EnemyController : MovingController
 
     public Transform objective;
     NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         //Buscar el objective por tag
         objective = GameObject.FindGameObjectWithTag("Player").transform;
+       
     }
 
     // Update is called once per frame
@@ -22,5 +24,15 @@ public class EnemyController : MovingController
     {
         agent.destination = objective.position;
     }
-    
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+       
+        Debug.Log(hit.gameObject);
+        Debug.Log(hit.gameObject.tag);
+        
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+    }
 }
