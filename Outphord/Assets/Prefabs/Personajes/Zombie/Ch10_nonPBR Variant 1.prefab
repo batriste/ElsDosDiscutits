@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8477346047671665405}
   - component: {fileID: 8477346047671665406}
   - component: {fileID: 8477346047671665407}
+  - component: {fileID: 5352776106650764283}
   m_Layer: 0
   m_Name: Ch10_nonPBR Variant 1
   m_TagString: Untagged
@@ -118,6 +119,26 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
+--- !u!95 &5352776106650764283
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5614964434012748384}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5845c6580ce26904382527ce1be32d1c, type: 3}
+  m_Controller: {fileID: 9100000, guid: 58f28112340b62d4388ef8ca893001b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8477346046657629619
 GameObject:
   m_ObjectHideFlags: 0

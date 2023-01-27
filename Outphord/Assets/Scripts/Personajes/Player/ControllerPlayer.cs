@@ -89,11 +89,12 @@ public class ControllerPlayer : MovingController
         if (player.isGrounded)
         {
             fallVelocity = -gravetat * Time.deltaTime;
-
+            anim.SetBool("Jump", false);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 fallVelocity = powerJump;
+                anim.SetBool("Jump", true);
             }
         }
         else
