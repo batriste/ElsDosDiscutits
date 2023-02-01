@@ -8,7 +8,13 @@ public class EnemyController : MovingController
 
 
     public Transform objective;
+    /// <summary>
+    /// Sera el daño que hara el zombie si es un zombie normal haria 1/4 de la vida del player y 1/2 si es un jefe
+    /// </summary>
+    public float damage;
     NavMeshAgent agent;
+    private float distance;
+    private bool attack;
     
     // Start is called before the first frame update
     void Start()
@@ -18,29 +24,39 @@ public class EnemyController : MovingController
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         //Buscar el objective por tag
         objective = GameObject.FindGameObjectWithTag("Player").transform;
-        //Falta Comprovacion de que exista       
+        //Falta Comprovacion de que exista
+        distance = Vector3.Distance(transform.position, agent.destination);
     }
 
     // Update is called once per frame
     void Update()
     {
         agent.destination = objective.position;
-        if(agent.velocity.magnitude> 0 )
+        distance = Vector3.Distance(transform.position, agent.destination);
+        if (agent.velocity.magnitude> 0f )
         {
             anim.SetBool("Walk", true);
-            
+            if (distance < 1.5f)
+            {
+                
+                attack = true;
+                //Hariamos daño y se activa la animacion de atacar
+
+                if (distance < 0.8f && attack == true)
+                {
+                    objective.SendMessage("DamageTaken", damage);
+                    attack = false;
+                }
+            }
+            else
+            {
+                attack = false;
+            }
         }
+        
+        anim.SetBool("Attack", attack);
         //Revisar distancias porque no en todos los entornos se representa igual
-        if(Vector3.Distance(transform.position, agent.destination) < 1.5f)
-        {
-            Debug.Log(Vector3.Distance(transform.position, agent.destination) + (" Estoy cerca"));
-            //Hariamos daño y se activa la animacion de atacar
-            anim.SetBool("Attack", true);
-        }
-        else
-        {
-            anim.SetBool("Attack", false);
-        }
+        
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {

@@ -66,6 +66,7 @@ public class MovingController : MonoBehaviour
     public void onDeadHandler()//Se encargará de gestionar la muerte del enemigo.
     {
         EnableRagdoll();
+        Debug.Log("He muerto");
         //Esperaremos y eliminaremos al personaje
     }
 
