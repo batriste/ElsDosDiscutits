@@ -101,7 +101,7 @@ public class ControllerPlayer : MovingController
         {
             fallVelocity -= gravetat * Time.deltaTime;
         }
-
+        //Revisar y si eso mover tambien hacia la direccion que va el player
         movePlayer.y = fallVelocity;
         //Rampas
         SlideDown();

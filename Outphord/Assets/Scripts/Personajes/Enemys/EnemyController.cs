@@ -30,10 +30,10 @@ public class EnemyController : MovingController
             anim.SetBool("Walk", true);
             
         }
-        
-        if(Vector3.Distance(transform.position, agent.destination) < 1f)
+        //Revisar distancias porque no en todos los entornos se representa igual
+        if(Vector3.Distance(transform.position, agent.destination) < 1.5f)
         {
-            Debug.Log(Vector3.Distance(transform.position, agent.destination) + ());
+            Debug.Log(Vector3.Distance(transform.position, agent.destination) + (" Estoy cerca"));
             //Hariamos daño y se activa la animacion de atacar
             anim.SetBool("Attack", true);
         }
