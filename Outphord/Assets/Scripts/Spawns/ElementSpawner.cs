@@ -21,7 +21,7 @@ public class ElementSpawner : MonoBehaviour
         {
         
         if (tiempo <= 0) {
-                
+                Debug.Log("Stoy spawn");
                 elementsSpawned[count] = Instantiate(elementsToSpawn[0], new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Quaternion.identity);
                 StartCoroutine(waitForDestroy(count));
                 tiempo = tEspera;

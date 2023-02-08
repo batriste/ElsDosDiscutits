@@ -6,17 +6,26 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 5;
+    public float maxHealth;
     
-    public float currentHealth = 3;
+    public float currentHealth;
     public float actualHealth;
     public bool CanDamaged = true;
     public float TimeToDamage = 5f;
     public UnityEvent onDamageTaken;
     public UnityEvent onDead;
     // Start is called before the first frame update
-    
-    
+    void Start()
+    {
+        if(maxHealth < 5f)
+        {
+            maxHealth = 5f;
+            
+        }
+        currentHealth = maxHealth;
+    }
+
+
     public void DamageTaken(float amount)
     {
         actualHealth = currentHealth;
@@ -25,22 +34,19 @@ public class Health : MonoBehaviour
         {
             if(CanDamaged)
             {
+                CanDamaged = false;
+                StartCoroutine(waitForDamage(TimeToDamage));
                 DamageTakenPlayer(amount);
             }
-            CanDamaged = false;
+            
         }
         else
         {
+            Debug.Log("Soy un zombie y estoy muriendo " + actualHealth);
             DamageTakenPlayer(amount);
         }
-        
-        
-        if (this.gameObject.tag == "Player" && CanDamaged!)
-        {
-            StartCoroutine(waitForDamage(TimeToDamage));
-        }
+        // Asi actualizaremos la vida aun sin recibir daño
         onDamageTaken.Invoke();
-        
     }
 
     private void DamageTakenPlayer(float amount)

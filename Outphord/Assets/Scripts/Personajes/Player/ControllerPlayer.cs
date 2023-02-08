@@ -127,11 +127,7 @@ public class ControllerPlayer : MovingController
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.tag == "Zombie")
-        {
-            //Un zombie nos esta golpeando
-            //Nos restaria vida
-        }
+        
         
         hitNormal = hit.normal;
     }

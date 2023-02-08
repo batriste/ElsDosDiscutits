@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 public class EnemyController : MovingController
 {
     // Start is called before the first frame update
@@ -14,8 +15,8 @@ public class EnemyController : MovingController
     public float damage;
     NavMeshAgent agent;
     private float distance;
-    private bool attack;
-    
+    public bool attack;
+    private float time = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,8 +45,9 @@ public class EnemyController : MovingController
 
                 if (distance < 0.8f && attack == true)
                 {
-                    objective.SendMessage("DamageTaken", damage);
-                    attack = false;
+
+                    StartCoroutine(waitForDamage(time));
+
                 }
             }
             else
@@ -58,15 +60,15 @@ public class EnemyController : MovingController
         //Revisar distancias porque no en todos los entornos se representa igual
         
     }
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private IEnumerator waitForDamage(float time)
     {
-       
-        Debug.Log(hit.gameObject);
-        Debug.Log(hit.gameObject.tag);
-        
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.tag);
+        yield return new WaitForSecondsRealtime(time);
+        if (distance < 0.8f && attack == true)
+        {
+            objective.SendMessage("DamageTaken", damage);
+            
+            
+        }
+        attack = false;
     }
 }

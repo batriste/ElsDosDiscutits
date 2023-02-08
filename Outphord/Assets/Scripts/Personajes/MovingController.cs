@@ -26,8 +26,8 @@ public class MovingController : MonoBehaviour
     
     private void Awake()
     {
-        _ragdollRigidbodies = GetComponentsInChildren<Rigidbody>();
-        DisableRagdoll();
+        //_ragdollRigidbodies = GetComponentsInChildren<Rigidbody>();
+        //DisableRagdoll();
     }
 
     // Start is called before the first frame update
@@ -65,7 +65,7 @@ public class MovingController : MonoBehaviour
     }
     public void onDeadHandler()//Se encargará de gestionar la muerte del enemigo.
     {
-        EnableRagdoll();
+        //EnableRagdoll();
         Debug.Log("He muerto");
         //Esperaremos y eliminaremos al personaje
     }

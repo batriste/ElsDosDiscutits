@@ -11,6 +11,7 @@ public class HealthBar : MonoBehaviour
     }
     public void UpdateHealth()
     {
+       
         float x = health.currentHealth / health.maxHealth;
         transform.localScale = new Vector3(x, 1, 1);
     }

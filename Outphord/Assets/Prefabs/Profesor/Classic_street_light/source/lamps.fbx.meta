@@ -3,7 +3,77 @@ guid: 03cae3b351080ca4894254c6efe987a4
 ModelImporter:
   serializedVersion: 22103
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: e1494f49f61da5743a71af451411d428, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp01
+    second: {fileID: 2100000, guid: 3ef1242f411d0a7429586832dabcb074, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp02
+    second: {fileID: 2100000, guid: 33776a68751579c48a09c112e8220aea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp03
+    second: {fileID: 2100000, guid: 7566fde7af5cf4b4d8150f57b4f3fdc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp_04
+    second: {fileID: 2100000, guid: 3311ee40445910049b79e15509911047, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole_2side_1
+    second: {fileID: 2100000, guid: df00837718bf57b4cae88f71294f78f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole_4side_1
+    second: {fileID: 2100000, guid: 848b87b18eaaee14bb1593b7065c7e47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole_single_1
+    second: {fileID: 2100000, guid: b47206b2411ea4e4ba26917feaa65b65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole_single_2
+    second: {fileID: 2100000, guid: 910d2591e9a29c545a4d413257f3cb24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole_small_1
+    second: {fileID: 2100000, guid: b4cf603ee489676408e660cfde9a2fce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole_small_2
+    second: {fileID: 2100000, guid: cff0b7d6713a984439a45eafa7f069f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole_wall_1
+    second: {fileID: 2100000, guid: beb57a745fc49414b953120ac2ecf8a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole_wall_2
+    second: {fileID: 2100000, guid: faf07f50e2452114a94571ae9d8a5792, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pole_wall_3
+    second: {fileID: 2100000, guid: 472e7128d6ccd4e4a898bd1702e7bb1f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -11,29 +11,35 @@ public class Bala : MonoBehaviour
     public float flyTime = 3f;
     public float damage = 2f;
 
-   
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        element = gameObject.GetComponent<Rigidbody>();
+        element = GetComponent<Rigidbody>();
+        element.AddForce(transform.forward * Speed, ForceMode.VelocityChange);
+        Invoke("DestroyBullet", flyTime);
+    }
+        // Start is called before the first frame update
+        void Start()
+    {
+        //element = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * Speed * Time.deltaTime;
+        //transform.position += transform.forward * Speed * Time.deltaTime;
     }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         //Revisar pero funciona
-        Debug.Log(other.gameObject.tag);
+        Debug.Log(other.gameObject.tag + " Estoy en el trigger");
         if (other.CompareTag("Zombie"))
         {
             other.SendMessage("DamageTaken", damage);
             DestroyBullet();
         }
     }
+    
     void DestroyBullet()
     {
         Destroy(gameObject);
